@@ -13,10 +13,11 @@
 
 # [Update ](https://github.com/h4xrOx/gamesense_docs/find/4f920eb67e2809c4e68dc64b0726c8ee4f6a625e) https://docs.gamesense.cloud
 
-`https://github.com/h4xrOx/gamesense_docs/find/4f920eb67e2809c4e68dc64b0726c8ee4f6a625e`
+{% page-ref page="https://github.com/h4xrOx/gamesense_docs/find/4f920eb67e2809c4e68dc64b0726c8ee4f6a625e" %}
 
 # site_name: docs
 - Home: {% page-ref page="./docs/docs/index..md" %}
+
 ## For users:
   - Getting Started: {% page-ref page="./for_users/getting_started.md" %}
   - Features:
@@ -29,7 +30,13 @@
   - Skinchanger: {% page-ref page="./for_users/features/data/skinchanger.md" %}
   - Playerlist: {% page-ref page="./for_users/features/data/playerlist.md" %}
   - Common issues & Troubleshooting: {% page-ref page="./for_users/common_issues_and_troubleshooting.md" %}
-## For developers: - Getting Started: {% page-ref page="./for_developers/getting_started.md" %} - API: - About: {% page-ref page="./for_developers/api/about.md" %} #Some basic info about api - List: - \_G: {% page-ref page="./for_developers/api/data/_G.md" %}  
+  
+## For developers: 
+   - Getting Started: {% page-ref page="./for_developers/getting_started.md" %} 
+   
+## API: 
+   - About: {% page-ref page="./for_developers/api/about.md" %} #Some basic info about api 
+   - List: - \_G: {% page-ref page="./for_developers/api/data/_G.md" %}  
    - bit: {% page-ref page="./for_developers/api/data/bit.md" %}  
    - client: {% page-ref page="./for_developers/api/data/client.md" %}  
    - config: {% page-ref page="./for_developers/api/data/config.md" %}  
