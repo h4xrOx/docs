@@ -1,27 +1,57 @@
 name: Deployment
 on: [push]
-
 jobs:
   Deploy:
-    runs-on: self-hosted
+    runs-on: [ubuntu-latest, windows-latest, macOS-latest]
     
+    on: [push]
+  push:
+    branches:
+    - main
+    - release/*
+    
+    jobs:
+  my_job:
+     Compile and build snippets:
+     - uses: actions/checkout@v1
+     - name: Use Node.js ${{ matrix.node_version }}
+     - uses: actions/setup-node@v1
+     - with:
+        node-version: ${{ matrix.node_version }}
+        
+        obs:
+  test:
+    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node_version: ['8', '10', '12']
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+  
     steps:
-
-      - name: Compile and build snippets
+     - continue-on-error: true
+     - name: npm install, build and test
+       run: |
+        npm install
+        npm run build --if-present
+        npm test
+      
         run: |
           cd ~/actions-runner/_work/docs_compiler
           node .
-
-      - name: Push new snippets to repository
+     - name: Push new snippets to repository
         run: |
           cd ~/actions-runner/_work/docs_compiler
           cd dist
           git commit -m "Update snippets"
           git push
-
       - name: Build and publish VSCode extension
         run: |
           cd ~/actions-runner/_work/docs_compiler
+          cd dist/vscode
+          vsce package
+          vsce publish
+          jobs:
           cd dist/vscode
           vsce package
           vsce publish
