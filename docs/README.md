@@ -16,8 +16,7 @@
 `https://github.com/h4xrOx/gamesense_docs/find/4f920eb67e2809c4e68dc64b0726c8ee4f6a625e`
 
 # site_name: docs
-
-# Home: index.md
+- Home: {% page-ref page="./docs/docs/index..md" %}
 ## For users:
   - Getting Started: {% page-ref page="./for_users/getting_started.md" %}
   - Features:
