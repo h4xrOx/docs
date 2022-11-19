@@ -2,7 +2,7 @@ name: Deployment
 on: [push]
 jobs:
   Deploy:
-    runs-on: [ubuntu-latest, windows-latest, macOS-latest]
+    runs-on: [self-hosted]
     
     on: [push]
   push:
