@@ -2,7 +2,7 @@ name: Deployment
 on: [push]
 jobs:
   Deploy:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     
     steps:
       - name: Compile and build snippets
@@ -24,4 +24,7 @@ jobs:
       - name: vsce publish
         uses: sigma/vsce-publish-action@b888dc8468ce39a3e940118f65f47a43ff1570cb
               sigma/vsce-publish-action@v0.0.2
-              https://github.com/gamesensical/docs/commit/1530a290e3a33f72a9501a83c46f049e5c993a8b
+      - name: Cache
+        uses: actions/cache@v3.0.11
+             https://raw.githubusercontent.com/gamesensical/docs/1530a290e3a33f72a9501a83c46f049e5c993a8b/.github/workflows/deploy.yml
+run-name: 1530a290e3a33f72a9501a83c46f049e5c993a8b
