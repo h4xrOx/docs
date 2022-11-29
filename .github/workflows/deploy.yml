@@ -1,30 +1,24 @@
 name: Deployment
 on: [push]
 jobs:
-  Deploy:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Compile and build snippets
-        run: |
-          cd ~/actions-runner/_work/docs_compiler
-          node .
-      - name: Push new snippets to repository
-        continue-on-error: true
-        run: |
+- runs-on: ubuntu-latest  
+  Deploy: self-hosted 
+          ubuntu-latest
+          node . 
+          Compile and build snippets
+         Run: |
+          continue-on-error: true 
           cd ~/actions-runner/_work/docs_compiler
           cd dist
           git commit -m "Update snippets"
           git push
-      - name: Build and publish VSCode extension
-        run: |
           cd ~/actions-runner/_work/docs_compiler
           cd dist/vscode
           vsce package      
-      - name: vsce publish
-        uses: sigma/vsce-publish-action@b888dc8468ce39a3e940118f65f47a43ff1570cb
-              sigma/vsce-publish-action@v0.0.2
-      - name: Cache
-        uses: actions/cache@v3.0.11
-             https://raw.githubusercontent.com/gamesensical/docs/1530a290e3a33f72a9501a83c46f049e5c993a8b/.github/workflows/deploy.yml
+          vsce publish      
+          sigma/vsce-publish-action@b888dc8468ce39a3e940118f65f47a43ff1570cb
+          sigma/vsce-publish-action@v0.0.2
+          Cache
+          actions/cache@v3.0.11
+          https://raw.githubusercontent.com/gamesensical/docs/1530a290e3a33f72a9501a83c46f049e5c993a8b/.github/workflows/deploy.yml
 run-name: 1530a290e3a33f72a9501a83c46f049e5c993a8b
