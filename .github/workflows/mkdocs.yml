@@ -1,7 +1,6 @@
-site_name: docs
-runs-on: self-hosted
+site_name: gamesense_docs
 nav: Missing required root key on
-  Setup .NET Core SDK: actions/setup-dotnet@v3.0.3
+  Setup .NET Core SDK: actions/setup-dotnet@v2.1.0
   with: Setup .NET Core SDK
   - Home: index.md
   - For users: 
@@ -66,3 +65,4 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.details
+
