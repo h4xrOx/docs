@@ -16,7 +16,7 @@
 
 ## This website documents the configuration options, usage and LUA API of [gamesense.pub](https://gamesense.pub).
 
-# [Update ](https://github.com/h4xrOx/gamesense_docs/find/4f920eb67e2809c4e68dc64b0726c8ee4f6a625e) https://docs.gamesense.cloud
+# [Update ](https://github.com/h4xrOx/gamesense_docs/find/4f920eb67e2809c4e68dc64b0726c8ee4f6a625e)
 
 {% page-ref page="https://github.com/h4xrOx/gamesense_docs/find/4f920eb67e2809c4e68dc64b0726c8ee4f6a625e" %}
 
