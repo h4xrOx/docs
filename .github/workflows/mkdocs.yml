@@ -1,6 +1,5 @@
-
-site_name: gamesense_docs
 site_name: docs
+runs-on: self-hosted
 nav: Missing required root key on
   Setup .NET Core SDK: actions/setup-dotnet@v3.0.3
   with: Setup .NET Core SDK
