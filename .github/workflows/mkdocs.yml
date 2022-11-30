@@ -1,6 +1,6 @@
 site_name: gamesense_docs
 nav: Missing required root key on
-  Setup .NET Core SDK: actions/setup-dotnet@v2.1.0
+  Setup .NET Core SDK: actions/setup-dotnet@v3.1.0
   with: Setup .NET Core SDK
   - Home: index.md
   - For users: 
