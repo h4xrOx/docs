@@ -27,7 +27,7 @@
   "libraries": {
     "GenDoc/1.0.0": {
       "type": "project",
-      "serviceable": false,
+      "serviceable": true,
       "sha512": ""
     },
     "Newtonsoft.Json/13.0.1": {
